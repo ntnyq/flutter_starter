@@ -2,8 +2,11 @@
   "editor.snippetSuggestions": "top",
   "cSpell.allowCompoundWords": true,
   "cSpell.words": [
+    "azlist",
+    "azlistview",
     "fluro",
     "Fluwx",
+    "lpinyin",
     "LTRB",
     "rxdart",
     "swiper",

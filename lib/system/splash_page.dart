@@ -1,12 +1,12 @@
 import 'dart:async';
-import 'package:flustars_flutter3/flustars_flutter3.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_starter/common/constants/storage.dart';
+import 'package:rxdart/rxdart.dart';
+import 'package:flustars_flutter3/flustars_flutter3.dart';
+import 'package:flutter_starter/home/router.dart';
 import 'package:flutter_starter/common/router/navigator.dart';
-import 'package:flutter_starter/setting/router.dart';
+import 'package:flutter_starter/common/constants/constants.dart';
 import 'package:flutter_starter/widgets/fractionally_aligned_sized_box.dart';
 import 'package:flutter_swiper_null_safety_flutter3/flutter_swiper_null_safety_flutter3.dart';
-import 'package:rxdart/rxdart.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -57,7 +57,7 @@ class _SplashPageState extends State<SplashPage> {
   }
 
   void _goHome() {
-    AppNavigator.push(context, SettingRouter.settingPage, replace: true);
+    AppNavigator.push(context, HomeRouter.homePage, replace: true);
   }
 
   @override

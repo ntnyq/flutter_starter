@@ -1,5 +1,7 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_starter/home/router.dart';
+import 'package:flutter_starter/play/router.dart';
 import 'package:flutter_starter/setting/router.dart';
 import 'package:flutter_starter/common/router/interface.dart';
 
@@ -19,6 +21,8 @@ class Routes {
 
     _listRouter.clear();
     // Add router module
+    _listRouter.add(HomeRouter());
+    _listRouter.add(PlayRouter());
     _listRouter.add(SettingRouter());
 
     void initRouter(IRouterProvider routerProvider) {
