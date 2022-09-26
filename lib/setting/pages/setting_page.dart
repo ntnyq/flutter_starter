@@ -64,7 +64,10 @@ class _SettingPageState extends State<SettingPage> {
       body: Column(
         children: <Widget>[
           AppGap.h5,
-          const ClickableItem(title: '账号管理'),
+          ClickableItem(
+            title: '账号管理',
+            onTap: () {},
+          ),
           Consumer<ThemeProvider>(
             builder: (_, provider, child) {
               return ClickableItem(
@@ -85,7 +88,10 @@ class _SettingPageState extends State<SettingPage> {
               );
             },
           ),
-          const ClickableItem(title: '检查更新'),
+          ClickableItem(
+            title: '检查更新',
+            onTap: () {},
+          ),
           ClickableItem(
             title: '关于我们',
             onTap: () => AppNavigator.push(context, SettingRouter.aboutPage),
@@ -94,6 +100,11 @@ class _SettingPageState extends State<SettingPage> {
             title: '退出登录',
             onTap: _showExitDialog,
           ),
+          if (!ConstantEnv.isProduction)
+            ClickableItem(
+              title: '功能测试',
+              onTap: () => AppNavigator.push(context, SettingRouter.demoPage),
+            )
         ],
       ),
     );

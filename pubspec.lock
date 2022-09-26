@@ -245,6 +245,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  fluwx:
+    dependency: "direct main"
+    description:
+      name: fluwx
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "3.9.2"
   http:
     dependency: transitive
     description:
@@ -621,6 +628,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "2.1.2"
+  vibration:
+    dependency: "direct main"
+    description:
+      name: vibration
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.7.6"
   win32:
     dependency: transitive
     description:
