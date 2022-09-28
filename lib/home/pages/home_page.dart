@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_starter/common/router/navigator.dart';
 import 'package:flutter_starter/play/router.dart';
 import 'package:flutter_starter/widgets/my_app_bar.dart';
-import 'package:flutter_starter/common/constants/constants.dart';
 import 'package:flutter_starter/widgets/my_button.dart';
+import 'package:flutter_starter/common/constants/constants.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -26,6 +26,20 @@ class _HomePageState extends State<HomePage> {
             text: '城市选择',
             onPressed: () {
               AppNavigator.push(context, PlayRouter.azlistPage);
+            },
+          ),
+          AppGap.h16,
+          MyButton(
+            text: '高德地图',
+            onPressed: () {
+              AppNavigator.push(context, PlayRouter.aMapPage);
+            },
+          ),
+          AppGap.h16,
+          MyButton(
+            text: 'Silver示例',
+            onPressed: () {
+              AppNavigator.push(context, PlayRouter.silverPage);
             },
           ),
         ],

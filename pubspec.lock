@@ -188,6 +188,15 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_2d_amap:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: HEAD
+      resolved-ref: "9e1d22ec786494949637212e8cf3d4d8a1a27f94"
+      url: "https://github.com/simplezhli/flutter_2d_amap.git"
+    source: git
+    version: "0.2.0+2"
   flutter_blurhash:
     dependency: transitive
     description:

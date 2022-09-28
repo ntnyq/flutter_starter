@@ -57,6 +57,13 @@ dependencies:
 
   vibration: ^1.7.5
 
+  flutter_2d_amap:
+    git:
+      url: https://github.com/simplezhli/flutter_2d_amap.git
+
+  # amap_flutter_map: ^3.0.0
+  # amap_flutter_location: ^3.0.0
+
   shared_preferences: ^2.0.15
 
   flutter_easyloading: ^3.0.5
