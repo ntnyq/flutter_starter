@@ -16,6 +16,9 @@ class ConstantColor {
   static const Color line = Color(0xFFEEEEEE);
   static const Color darkLine = Color(0xFF3A3C3D);
 
+  static const Color unselectedItemColor = Color(0xffbfbfbf);
+  static const Color darkUnselectedItemColor = Color(0xFF4D4D4D);
+
   static const Color textPrimary = Color(0xFF333333);
   static const Color textSecondary = Color(0xFF999999);
   static const Color textThird = Color(0xFFCCCCCC);

@@ -30,13 +30,6 @@ class _HomePageState extends State<HomePage> {
           ),
           AppGap.h16,
           MyButton(
-            text: '高德地图',
-            onPressed: () {
-              AppNavigator.push(context, PlayRouter.aMapPage);
-            },
-          ),
-          AppGap.h16,
-          MyButton(
             text: 'Silver示例',
             onPressed: () {
               AppNavigator.push(context, PlayRouter.silverPage);

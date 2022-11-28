@@ -5,7 +5,7 @@ import 'package:flustars_flutter3/flustars_flutter3.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_starter/common/router/routes.dart';
-import 'package:flutter_starter/system/splash_page.dart';
+import 'package:flutter_starter/system/pages/splash_page.dart';
 import 'package:flutter_starter/common/utils/utils.dart';
 import 'package:flutter_starter/common/constants/constants.dart';
 import 'package:flutter_starter/common/providers/providers.dart';

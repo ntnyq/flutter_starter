@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:rxdart/rxdart.dart';
+import 'package:flutter_starter/common/router/routes.dart';
 import 'package:flustars_flutter3/flustars_flutter3.dart';
-import 'package:flutter_starter/home/router.dart';
 import 'package:flutter_starter/common/router/navigator.dart';
 import 'package:flutter_starter/common/constants/constants.dart';
 import 'package:flutter_starter/widgets/fractionally_aligned_sized_box.dart';
@@ -51,13 +51,14 @@ class _SplashPageState extends State<SplashPage> {
         SpUtil.putBool(ConstantStorage.guideKey, false);
         _initGuide();
       } else {
-        _goHome();
+        _goToNavigation();
+        AppNavigator.push(context, Routes.navigation, clearStack: true);
       }
     });
   }
 
-  void _goHome() {
-    AppNavigator.push(context, HomeRouter.homePage, replace: true);
+  void _goToNavigation() {
+    AppNavigator.push(context, Routes.navigation, clearStack: true);
   }
 
   @override
@@ -87,7 +88,7 @@ class _SplashPageState extends State<SplashPage> {
               }),
               onTap: (index) {
                 if (index == _imageList.length - 1) {
-                  _goHome();
+                  _goToNavigation();
                 }
               },
             ),
