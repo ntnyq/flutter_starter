@@ -62,16 +62,18 @@ class MyApp extends StatelessWidget {
       locale: localeProvider.locale,
       navigatorKey: navigatorKey,
       builder: (BuildContext context, Widget? child) {
-        EasyLoading.init();
+        child = EasyLoading.init()(context, child);
 
         if (UtilDevice.isAndroid) {
           UtilTheme.setSystemNavigationBar(themeProvider.getThemeMode());
         }
 
-        return MediaQuery(
+        child = MediaQuery(
           data: MediaQuery.of(context).copyWith(textScaleFactor: 1),
-          child: child!,
+          child: child,
         );
+
+        return child;
       },
     );
   }
