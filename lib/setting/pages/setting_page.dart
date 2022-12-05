@@ -4,6 +4,7 @@ import 'package:flustars_flutter3/flustars_flutter3.dart';
 import 'package:flutter_starter/common/providers/providers.dart';
 import 'package:flutter_starter/common/router/navigator.dart';
 import 'package:flutter_starter/setting/router.dart';
+import 'package:flutter_starter/system/router.dart';
 import 'package:flutter_starter/widgets/clickable_item.dart';
 import 'package:flutter_starter/widgets/my_app_bar.dart';
 import 'package:flutter_starter/common/constants/constants.dart';
@@ -89,8 +90,8 @@ class _SettingPageState extends State<SettingPage> {
             },
           ),
           ClickableItem(
-            title: '检查更新',
-            onTap: () {},
+            title: '版本信息',
+            onTap: () => AppNavigator.push(context, SystemRouter.versionPage),
           ),
           ClickableItem(
             title: '关于我们',
