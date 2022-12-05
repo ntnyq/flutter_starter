@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fluwx/fluwx.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:vibration/vibration.dart';
 import 'package:flutter_starter/widgets/my_app_bar.dart';
 import 'package:flutter_starter/widgets/my_button.dart';
@@ -13,23 +13,9 @@ class DemoPage extends StatefulWidget {
 }
 
 class _DemoPageState extends State<DemoPage> {
-  WeChatScene scene = WeChatScene.SESSION;
-
   @override
   void initState() {
     super.initState();
-    _initFluwx();
-  }
-
-  _initFluwx() async {
-    await registerWxApi(
-      appId: 'wxd930ea5d5a258f4f',
-      doOnAndroid: true,
-      doOnIOS: true,
-      universalLink: 'https://your.univerallink.com/link/',
-    );
-    var result = await isWeChatInstalled;
-    debugPrint('is installed $result');
   }
 
   @override
@@ -58,10 +44,7 @@ class _DemoPageState extends State<DemoPage> {
             text: '微信分享',
             minWidth: 80,
             onPressed: () {
-              shareToWeChat(WeChatShareTextModel(
-                'Hello world',
-                scene: scene,
-              ));
+              EasyLoading.showError('暂未支持');
             },
           )
         ],

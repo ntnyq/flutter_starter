@@ -1,6 +1,7 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_starter/common/router/routes.dart';
+import 'package:flutter_starter/system/router.dart';
 
 class AppNavigator {
   static void unFocus() {
@@ -35,5 +36,15 @@ class AppNavigator {
   static void goBackWithParams(BuildContext context, Object result) {
     unFocus();
     Navigator.pop<Object>(context, result);
+  }
+
+  static void goWebviewPage(
+    BuildContext context, {
+    required String title,
+    required String url,
+  }) {
+    final String queryString =
+        'title=${Uri.encodeComponent(title)}&url=${Uri.encodeComponent(url)}';
+    push(context, '${SystemRouter.webviewPage}?$queryString');
   }
 }

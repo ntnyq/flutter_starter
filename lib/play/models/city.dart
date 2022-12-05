@@ -1,4 +1,5 @@
 import 'dart:convert';
+
 import 'package:azlistview/azlistview.dart';
 
 class CityModel extends ISuspensionBean {

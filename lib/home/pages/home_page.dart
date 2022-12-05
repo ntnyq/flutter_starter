@@ -35,6 +35,17 @@ class _HomePageState extends State<HomePage> {
               AppNavigator.push(context, PlayRouter.silverPage);
             },
           ),
+          AppGap.h16,
+          MyButton(
+            text: 'Webview示例',
+            onPressed: () {
+              AppNavigator.goWebviewPage(
+                context,
+                title: '稀土掘金',
+                url: 'https://juejin.cn',
+              );
+            },
+          ),
         ],
       ),
     );
